@@ -34,4 +34,12 @@ public class Repo {
         this.commits.add(newCommit);
     }
 
+    public Commit getCommitById(String searchId) {
+        for (Commit commit : commits) {
+            if (commit.getUniqueId().equals(searchId)) {
+                return commit;
+            }
+        }
+        return null;
+    }
 }

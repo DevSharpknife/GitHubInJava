@@ -16,5 +16,4 @@ public class Commit {
         return uniqueId;
     }
 
-
 }

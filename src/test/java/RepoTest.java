@@ -46,8 +46,13 @@ public class RepoTest {
 
     @Test
     public void canGetCommitById() {
+        repo.addCommit(commit1);
         repo.addCommit(commit2);
-        repo.getCommitById()
-        assertEquals();
+        assertEquals(commit2, repo.getCommitById("0987654321qwertyuiop"));
+    }
+
+    @Test
+    public void canGetCommitById__NotFound() {
+        assertEquals(null, repo.getCommitById("1"));
     }
 }
